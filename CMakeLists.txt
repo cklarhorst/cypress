@@ -38,7 +38,7 @@ set(PYBIND11_INSTALL TRUE CACHE BOOL "pybind11 install" FORCE INTERNAL)
 add_subdirectory(external/pybind11)
 
 # Enable C++14 support
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++14 -g")
 
 # Enable all warnings on MSVC and GCC/Clang/Intel
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
@@ -116,6 +116,7 @@ add_custom_command(
 # Compile the library itself
 add_library(cypress
 	"${CMAKE_BINARY_DIR}/include/resource/backend/nmpi/nmpi_broker.hpp"
+	cypress/backend/hls/hls
 	cypress/backend/resources
 	cypress/backend/brainscales/brainscales_lib
 	cypress/backend/brainscales/slurm

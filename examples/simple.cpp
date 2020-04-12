@@ -81,8 +81,8 @@ int main(int argc, const char *argv[])
     create_dot(net, "Simple Network", "simple.dot");
     
 	std::cout << "---------" << std::endl;
-	std::cout << net.runtime().initialize << ", " << net.runtime().sim << ", "
-	          << net.runtime().finalize << ", " << net.runtime().total << ", "
+	std::cout << net.runtime().initialize << ", " << net.runtime().sim   << ", "
+	          << net.runtime().finalize   << ", " << net.runtime().total << ", "
 	          << std::endl;
 
 	// Print the spike times for each target neuron
